@@ -1,17 +1,17 @@
-document.querySelector('button').addEventListener('click', updateQuote)
+document.querySelector('button').addEventListener('click', updateAdvice)
 
 const url = `https://api.adviceslip.com/advice`
 
-async function getQuote() {
+async function getAdvice() {
     const res = await fetch(url)
     const obj = await res.json()
     return obj.slip
 }
 
-async function updateQuote() {
-    const slip = await getQuote()
+async function updateAdvice() {
+    const slip = await getAdvice()
     document.querySelector('#advice-id').textContent = `Advice #${slip.id}`
-    document.querySelector('#quotation').textContent = `${slip.advice}`
+    document.querySelector('#advice-text').textContent = `${slip.advice}`
 }
 
-updateQuote()
+updateAdvice()
