@@ -49,6 +49,7 @@ body {
   min-height: 100vh;
   text-rendering: optimizeSpeed;
   line-height: 1.5;
+  font-family: sans-serif;
 }
 
 /* A elements that don't have a class get default styles */
@@ -89,6 +90,15 @@ select {
 
 /* UTILITY CLASSES */
 
+.flow > :where(:not(:first-child)) {
+  padding-block-start: 2rem;
+}
+
+.container {
+  margin-inline: auto;
+  width: min(95%, 25rem);
+}
+
 .sr-only {
   position: absolute;
   width: 1px;
@@ -101,7 +111,51 @@ select {
   border-width: 0;
 }
 
+.bg-dark {
+  background-color: var(--clr-dark);
+}
+
+.bg-medium {
+  background-color: var(--clr-medium);
+}
+
+.bg-accent {
+  background-color: var(--clr-accent);
+}
+
+.text-cyan {
+  color: var(--clr-cyan);
+}
+
+.text-accent {
+  color: var(--clr-accent);
+}
+
+.fs-700 {
+  font-size: var(--fs-700);
+}
+
+.text-center {
+  text-align: center;
+}
+
 /* COMPONENTS */
+
+.button {
+  /* all: initial; */
+  padding: 0.5em;
+  border: none;
+  border-radius: 50%;
+}
+
+/* ADDITIONAL STYLES */
+
+.main {
+  margin-block-start: 3rem;
+  padding-block: 2rem;
+  padding-inline: 1rem;
+  border-radius: 5%;
+}
 
 .attribution {
   font-size: 11px;
